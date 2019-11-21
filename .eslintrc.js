@@ -1,7 +1,3 @@
-// const jsExts = ['.js', '.jsx'];
-// const tsExts = ['.ts', '.tsx'];
-// const allExts = [...jsExts, ...tsExts];
-
 module.exports = {
   extends: [
     'airbnb',
@@ -22,23 +18,17 @@ module.exports = {
   },
   env: {
     browser: true,
+    commonjs: true,
     node: true,
-    jquery: true,
     jest: true,
   },
-  plugins: ['html', 'prettier', 'react-hooks', '@typescript-eslint'],
-  // see https://github.com/benmosher/eslint-plugin-import/issues/1285
-  // settings: {
-  //   'import/extensions': allExts,
-  //   'import/parsers': {
-  //     '@typescript-eslint/parser': tsExts,
-  //   },
-  //   'import/resolver': {
-  //     'node': {
-  //       extensions: allExts,
-  //     },
-  //   },
-  // },
+  plugins: [
+    'html',
+    'react',
+    'react-hooks',
+    '@typescript-eslint',
+    'prettier',
+  ],
   rules: {
     // typescript
     '@typescript-eslint/indent': ['error', 2],
@@ -56,13 +46,16 @@ module.exports = {
         'accessibility': 'no-public',
       }
     ],
-    '@typescript-eslint/no-var-requires': 1,
+    '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/no-parameter-properties': 0,
     // javascript
     'no-useless-constructor': 0,
-    'no-empty-function': [1, {
-      'allow': ['constructors'] // allowed in constructors when using typescript `parameter properties`
-    }],
+    'no-empty-function': [
+      1,
+      {
+        'allow': ['constructors'] // allowed in constructors when using typescript `parameter properties`
+      }
+    ],
     'no-debugger': 1,
     'no-alert': 1,
     'no-await-in-loop': 0,
