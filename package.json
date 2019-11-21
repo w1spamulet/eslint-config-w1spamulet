@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-wispamulet",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "ESlint and Prettier Config from WispAmulet",
   "author": "WispAmulet <ylyzainali@gmail.com>",
   "repository": "git@github.com:WispAmulet/eslint-config-wispamulet.git",

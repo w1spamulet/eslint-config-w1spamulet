@@ -2,6 +2,7 @@ module.exports = {
   extends: [
     'airbnb',
     'plugin:@typescript-eslint/recommended',
+    'plugin:import/typescript',
     'prettier',
     'prettier/react',
     'prettier/@typescript-eslint',
@@ -24,6 +25,7 @@ module.exports = {
   },
   plugins: [
     'html',
+    'import',
     'react',
     'react-hooks',
     '@typescript-eslint',
