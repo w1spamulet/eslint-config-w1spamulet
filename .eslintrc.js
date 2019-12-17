@@ -31,10 +31,17 @@ module.exports = {
     '@typescript-eslint',
     'prettier',
   ],
+  overrides: [
+    {
+      files: ['*.js', '*.jsx'],
+      rules: {
+        '@typescript-eslint/explicit-function-return-type': 0,
+      },
+    },
+  ],
   rules: {
     // typescript
     '@typescript-eslint/indent': ['error', 2],
-    '@typescript-eslint/no-unused-vars': 0, // duplicated
     '@typescript-eslint/explicit-function-return-type': [
       1,
       {
@@ -42,6 +49,8 @@ module.exports = {
         'allowTypedFunctionExpressions': false // default
       }
     ],
+    '@typescript-eslint/no-empty-function': 0, // duplicated
+    '@typescript-eslint/no-unused-vars': 0, // duplicated
     '@typescript-eslint/explicit-member-accessibility': [
       1,
       {
@@ -53,7 +62,7 @@ module.exports = {
     // javascript
     'no-useless-constructor': 0,
     'no-empty-function': [
-      1,
+      2,
       {
         'allow': ['constructors'] // allowed in constructors when using typescript `parameter properties`
       }
@@ -68,7 +77,6 @@ module.exports = {
       'LabeledStatement',
       'WithStatement',
     ],
-    // 'no-unused-vars': 0,
     'no-unused-vars': [
       1,
       {
@@ -159,6 +167,7 @@ module.exports = {
         trailingComma: 'es5',
         singleQuote: true,
         printWidth: 80,
+        // semi: false,
       },
     ],
   },
