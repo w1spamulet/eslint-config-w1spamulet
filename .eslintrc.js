@@ -33,24 +33,36 @@ module.exports = {
   ],
   overrides: [
     {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        'no-unused-vars': 0, // disable it in .ts file
+        'react/prop-types': 0,
+      },
+    },
+    {
       files: ['*.js', '*.jsx'],
       rules: {
+        '@typescript-eslint/no-unused-vars': 0, // disable it in .js file
         '@typescript-eslint/explicit-function-return-type': 0,
       },
     },
   ],
   rules: {
     // typescript
+    '@typescript-eslint/no-explicit-any': 0,
+    '@typescript-eslint/no-unused-vars': [
+      1,
+      {
+        // ignoreRestSiblings: true,
+        argsIgnorePattern: 'res|next|^err',
+      },
+    ],
     '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/explicit-function-return-type': [
       1,
-      {
-        'allowExpressions': true,
-        'allowTypedFunctionExpressions': false // default
-      }
+      { 'allowExpressions': true }
     ],
     '@typescript-eslint/no-empty-function': 0, // duplicated
-    '@typescript-eslint/no-unused-vars': 0, // duplicated
     '@typescript-eslint/explicit-member-accessibility': [
       1,
       {

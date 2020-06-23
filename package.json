@@ -1,9 +1,9 @@
 {
-  "name": "eslint-config-wispamulet",
+  "name": "eslint-config-w1spamulet",
   "version": "0.0.4",
-  "description": "ESlint and Prettier Config from WispAmulet",
-  "author": "WispAmulet <ylyzainali@gmail.com>",
-  "repository": "git@github.com:WispAmulet/eslint-config-wispamulet.git",
+  "description": "ESlint and Prettier Config from w1spamulet",
+  "author": "w1spamulet <ylyzainali@gmail.com>",
+  "repository": "git@github.com:w1spamulet/eslint-config-w1spamulet.git",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
