@@ -72,6 +72,8 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/no-parameter-properties': 0,
     // javascript
+    'nonblock-statement-body-position': [1, "below"],
+    'no-plusplus': 0,
     'no-useless-constructor': 0,
     'no-empty-function': [
       2,
@@ -174,12 +176,12 @@ module.exports = {
     'react-hooks/exhaustive-deps': 1,
     // prettier
     'prettier/prettier': [
-      2,
+      1,
       {
-        trailingComma: 'es5',
-        singleQuote: true,
         printWidth: 80,
         // semi: false,
+        singleQuote: true,
+        trailingComma: 'es5',
       },
     ],
   },
